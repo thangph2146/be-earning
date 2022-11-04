@@ -50,7 +50,7 @@
       height: 100%;
       width: 100%;
       flex-wrap: wrap;
-      gap: 3%;
+      gap: 5%;
       .card {
         width: 30%;
         height: 32px;
@@ -106,6 +106,20 @@
         }
         .content {
           width: 20%;
+          font-weight: 400;
+          font-size: 15px;
+          color: #04004d;
+
+          &.active {
+            background: #bbcffb;
+            color: #004dff;
+            box-shadow: 0px 7px 20px rgba(21, 79, 212, 0.1);
+            border-radius: 6px;
+            height: 33px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
         }
       }
     }
@@ -127,6 +141,7 @@
     display: flex;
     flex-direction: column;
     padding: 0 15px;
+    margin-top: 10px;
     .top {
       height: 45%;
       width: 100%;
@@ -254,15 +269,15 @@
         font-size: 22px;
         margin-bottom: 15px;
       }
-      .time-count{
+      .time-count {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         align-content: center;
-        .number{
+        .number {
           position: absolute;
-          color: #FF0366;
+          color: #ff0366;
         }
       }
     }
@@ -356,7 +371,6 @@
           height: 24px;
         }
       }
-     
     }
   }
 }

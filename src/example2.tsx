@@ -32,7 +32,7 @@ const Example2: React.FC = () => {
     if (i > 0) {
       Data6Object.push({
         list: Data18.slice(i - 3, i),
-        primary: i + Math.floor(Math.random() * 2),
+        primary: i + Math.floor(Math.random() * 2) - 1,
       });
     }
   }
@@ -40,7 +40,7 @@ const Example2: React.FC = () => {
 
   return (
     <>
-      {/* <div>
+      <div>
         <h1>Câu 2:</h1>
         Tạo 1 danh sách gồm 24 phần tử không trùng lặp nhau từ file JSON cho
         trước.
@@ -71,15 +71,15 @@ const Example2: React.FC = () => {
             );
           })}
         </ul>
-      </div> */}
+      </div>
 
-      {/* <Example3_1 data={Data24} />
-      <Example3_2 data={Data6Object} />
-      <Example3_3 data={Data6Object} />
-      <Example3_4 data={Data6Object} />
-      <Example3_5 data={Data24} /> */}
+      <Example3_1 data={Data24} />
+      <Example3_2 data={Data6Object}data24={Data24} />
+      <Example3_3 data={Data6Object} data24={Data24}/>
+      <Example3_4 data={Data6Object} data24={Data24}/>
+      <Example3_5 data={Data24} />
       <Example3_6 data={Data24} />
-      {/* <Example3_7 data={Data6Object} /> */}
+      <Example3_7 data={Data6Object} />
     </>
   );
 };

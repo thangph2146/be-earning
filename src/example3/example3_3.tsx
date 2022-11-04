@@ -4,9 +4,11 @@ import React from "react";
 
 interface Iexample3_2 {
   data: any[];
+  data24: any[]
 }
 const Example3_2 = (props: Iexample3_2): JSX.Element => {
-  console.debug(props.data);
+  const { data24 , data}= props
+
   return (
     <div className="example2">
       <div className="header">
@@ -23,7 +25,7 @@ const Example3_2 = (props: Iexample3_2): JSX.Element => {
               <div className="card">
                 <div className="id-key">{item.primary}</div>
                 {item.list.map((e: any) => {
-                  return <div className="content">{e}</div>;
+                  return <div className={`content ${e === data24[item.primary - 1]? 'active' : ''}`}>{e}</div>;
                 })}
               </div>
             );
