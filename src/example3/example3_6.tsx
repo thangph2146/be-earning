@@ -1,15 +1,21 @@
 /* eslint-disable no-loop-func */
-import { Modal } from "antd";
 import React, { useState } from "react";
-import { DownOutlined } from "@ant-design/icons";
+import { LoadingOutlined } from "@ant-design/icons";
 interface Iexample3_6 {
   data: any[];
 }
 const Example3_6 = (props: Iexample3_6): JSX.Element => {
   const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isCount, setIsCount] = useState(2);
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+  setInterval(function () {
+    setIsCount(isCount - 1);
+    if (isCount === 0) {
+      setIsModalOpen(false);
+    }
+  }, 1000);
   return (
     <div className="example2">
       <div className="header">
@@ -49,11 +55,15 @@ const Example3_6 = (props: Iexample3_6): JSX.Element => {
       </div>
       <div className={`modal-body ${isModalOpen ? "open" : ""}`}>
         <button onClick={() => handleCancel()} className="btn-close">
-         <img src={require('../assets/image/arrow-down.png')} alt="" />
+          <img src={require("../assets/image/arrow-down.png")} alt="" />
         </button>
         <div className="cotent">
           <img src={require("../assets/image/coppy-paste.png")} alt="" />
           <span className="sub-content">Saved to clipboard</span>
+          <div className="time-count">
+            <div className="number">{isCount}s</div>
+            <LoadingOutlined style={{ scale: "2", color: "#FF0366" }} />
+          </div>
         </div>
       </div>
     </div>

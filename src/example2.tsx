@@ -40,43 +40,46 @@ const Example2: React.FC = () => {
 
   return (
     <>
-      <h1>Câu 2:</h1>
-      Tạo 1 danh sách gồm 24 phần tử không trùng lặp nhau từ file JSON cho
-      trước.
-      <ul>
-        {Data24.map((item: any) => {
-          return <li>{item}</li>;
-        })}
-      </ul>
-      Từ danh sách 24 phần tử ở trên tạo ra 1 danh sách gồm 18 phần tử không
-      trùng lặp.
-      <ul>
-        {Data18.map((item: any) => {
-          return <li>{item}</li>;
-        })}
-      </ul>
-      Từ 18 phần tử vừa lấy được tạo thành 1 danh sách gồm 6 phần tử.
-      <ul>
-        {Data6Object.map((item: any) => {
-          return (
-            <li>
-              primary: {item.primary}
-              <ul>
-                {item.list.map((e: any) => {
-                  return <li>{e}</li>;
-                })}
-              </ul>
-            </li>
-          );
-        })}
-      </ul>
-      <Example3_1 data={Data24} />
+      {/* <div>
+        <h1>Câu 2:</h1>
+        Tạo 1 danh sách gồm 24 phần tử không trùng lặp nhau từ file JSON cho
+        trước.
+        <ul>
+          {Data24.map((item: any) => {
+            return <li>{item}</li>;
+          })}
+        </ul>
+        Từ danh sách 24 phần tử ở trên tạo ra 1 danh sách gồm 18 phần tử không
+        trùng lặp.
+        <ul>
+          {Data18.map((item: any) => {
+            return <li>{item}</li>;
+          })}
+        </ul>
+        Từ 18 phần tử vừa lấy được tạo thành 1 danh sách gồm 6 phần tử.
+        <ul>
+          {Data6Object.map((item: any) => {
+            return (
+              <li>
+                primary: {item.primary}
+                <ul>
+                  {item.list.map((e: any) => {
+                    return <li>{e}</li>;
+                  })}
+                </ul>
+              </li>
+            );
+          })}
+        </ul>
+      </div> */}
+
+      {/* <Example3_1 data={Data24} />
       <Example3_2 data={Data6Object} />
       <Example3_3 data={Data6Object} />
       <Example3_4 data={Data6Object} />
-      <Example3_5 data={Data24} />
+      <Example3_5 data={Data24} /> */}
       <Example3_6 data={Data24} />
-      <Example3_7 data={Data6Object} />
+      {/* <Example3_7 data={Data6Object} /> */}
     </>
   );
 };
