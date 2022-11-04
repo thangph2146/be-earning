@@ -181,6 +181,8 @@
           color: #ffffff;
           font-weight: 700;
           font-size: 17px;
+          border: none;
+          text-transform: uppercase;
           .ant-spin {
             .ant-spin-dot-item {
               background-color: #ffffff;
@@ -195,7 +197,9 @@
         border-radius: 10px;
         color: #ffffff;
         font-weight: 700;
-        font-size: 17px;
+          text-transform: uppercase;
+          border: none;
+          font-size: 17px;
         .ant-spin {
           .ant-spin-dot-item {
             background-color: #ffffff;
@@ -294,7 +298,8 @@
         width: 100%;
         background: #004dff;
         border-radius: 10px;
-        color: #ffffff;
+          text-transform: uppercase;
+          color: #ffffff;
         font-weight: 700;
         font-size: 17px;
         margin-top: 25px;
@@ -310,6 +315,7 @@
         font-size: 17px;
         margin-top: 25px;
         border: none;
+        text-transform: uppercase;
       }
       img {
         width: 100px;
